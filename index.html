@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<!--
+ homework 5, dynamic multiplication table
+ Robert Wentzell, UMass Lowell Computer Science, rwentzel@cs.uml.edu
+ Copyright (c) 2020 by Robert Wentzell. All rights reserved. May be
+freely
+ copied or excerpted for educational purposes with credit to the
+author.
+ updated by Robert Wentzell 10/29/2020
+-->
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/assignment5.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>
+          Assignment 5
+        </h1>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="highlight_centered_margins">
+          Dynamic multiplication table 
+          <br/>
+          Enter a number between -50 and 50
+          <br/>
+          Example input would be "1, 49" for horizontal, and "1, 49" for vertical.
+        </div>
+      </div>
+    </div>
+
+    <!-- form -->
+    <div class="row">
+      <div class="col-md-12">
+          <form onsubmit="return false">
+            <label>Starting horizontal multiplier: </label>
+            <input type="number" name="horz start" id="horiz_start" value="1"><br/>
+
+            <label>Ending horizontal multiplier: </label>
+            <input type="number" name="horz end" id="horiz_end" value="49"><br/>
+
+            <label>Starting vertical multiplier: </label>
+            <input type="number" name="vert start" id="vert_start" value="1"><br/>
+
+            <label>Ending vertical multiplier: </label>
+            <input type="number" name="vert end" id="vert_end" value="49"><br/><br/>
+            <input type="submit" value="Submit " onclick="return table_calc()">
+
+          </form>
+        </div>
+
+        <br/>
+      </div>
+    </div>
+      <div id="warning_msg"></div>
+
+
+    <div id="multiplication_table"></div>
+    <br><br>
+  </div>
+  <!-- jQuery -->
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- JavaScript -->
+  <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/table.js"></script>
+</body>
+</html>
